@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: whitesmoke;
+  }
+  
+  .dark-theme {
+    background-color: darkslategray;
+  }
+  
+  #icon {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 600px) {
+    #icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    #icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
+  :root {
+    --nav-color: rgba(36, 37, 42, 255);
+  }
+  
+  nav {
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .logo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: center;
+    font-size: 20px;
+  }
+  
+  .ul {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .li {
+    list-style-type: none;
+    padding: 10px 5px;
+  }
+  
+  .link {
+    text-decoration: none;
+    padding: 10px 30px;
+    color:white;
+    font-weight: 550;
+  }
+  
+  .link:hover {
+    color: #57c9e0;
+    border-bottom: 1px solid #57c9e0;
+    border-top: 1px solid #57c9e0;
+    color: rgb(254, 254, 254);
+  }
+  
+  .btn_div {
+    width: 20%;
+    background-color: var(--nav-color);
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact {
+    padding: 10px 30px;
+    border: none;
+    margin: 0 0 0 10px;
+    border-radius: 18px;
+    background-color: rgba(21, 151, 165, 255);
+    color: white;
+  }
+  
+  #menu {
+    color: rgb(255, 255, 255);
+    display: none;
+  }
+  
+  #check {
+    display: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    nav {
+      align-items: center;
+    }
+  
+    .logo {
+      width: 50%;
+      height: 100%;
+      font-size: 22px;
+      justify-content: center;
+    }
+  
+    .ul {
+      display: block;
+      background-color: #57c9e0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 10vh;
+      left: -1000px;
+      padding-top: 15%;
+      transition: all 2s linear 0s;
+    }
+  
+    .li {
+      text-align: center;
+      padding: 20px 20px;
+    }
+  
+    .btn_div {
+      display: none;
+    }
+  
+    #menu {
+      display: block;
+      font-size: 30px;
+      margin-right: 30px;
+    }
+  
+    #check:checked + .ul {
+      left: 0;
+    }
+  }
+  

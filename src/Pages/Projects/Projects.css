@@ -1,0 +1,92 @@
+.cardbox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Default to column for smaller screens */
+    padding: 20px;
+    height: 70vh;
+}
+
+.cardimage1 a, .cardimage2 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: navy;
+}
+
+.cardimage1:hover, .cardimage2:hover {
+    transform: scale(1.04);
+    transition: 1s;
+}
+
+.cardimage1 a:hover, .cardimage2 a:hover {
+    color: red;
+}
+
+.cardimage1 img, .cardimage2 img {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 769px) {
+    .cardbox {
+        flex-direction: row; /* Row layout for larger screens */
+    }
+
+    .cardimage1 img {
+        width: 700px;
+    }
+
+    .cardimage2 img {
+        width: 690px;
+        height: 350px;
+    }
+
+    h2 {
+        font-size: 2.5em; /* Larger font size for larger screens */
+    }
+}
+
+/* Tablet View */
+@media (max-width: 768px) {
+    .cardbox {
+        flex-direction: column; /* Stack items in a column */
+    }
+
+    .cardimage1 img, .cardimage2 img {
+        width: 90%;
+    }
+
+    .cardimage1 a, .cardimage2 a {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 2em; /* Adjust font size for tablet */
+    }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+    .cardimage1 img, .cardimage2 img {
+        width: 100%;
+    }
+
+    .cardimage1 a, .cardimage2 a {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 1.5em; /* Smaller font size for mobile */
+    }
+}

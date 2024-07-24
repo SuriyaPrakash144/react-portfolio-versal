@@ -1,0 +1,139 @@
+.about
+{
+    width: 100%;
+    padding: 78px 0px;
+    background-color:whitesmoke;
+}
+.about img
+{
+    height: auto;
+    width: 420px;
+    border-radius: 20px;
+}
+.main
+{
+    width: 1130px;
+    max-width: 95%;
+    /* background-color: yellow; */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-text
+{
+    width: 550px;
+}
+
+.about-text h1
+{
+    color: black;
+    font-size: 60px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+.about-text h5
+{
+    color: black;
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+span
+{
+    color: gray;
+}
+.about-text p
+{   
+    color: black;
+    letter-spacing: 1px;
+    line-height: 25px;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+button
+{
+    background:  rgba(87, 201, 224, 255);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+button:hover
+{
+    background: #000000;
+    color: #ffffff;
+    outline: 0;
+    transition: background-color 2s ease-out;
+}
+
+/* Tablet View */
+@media (min-width: 768px) {
+    .main {
+        flex-direction: row;
+    }
+
+    .about-text {
+        text-align: left;
+    }
+
+    .about-text h1 {
+        font-size: 3rem;
+    }
+
+    .about-text h5 {
+        font-size: 1.5rem;
+    }
+
+    .about-text p {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .about img {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .about-text h1 {
+        font-size: 2rem;
+    }
+
+    .about-text h5 {
+        font-size: 1rem;
+    }
+
+    .about-text p {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+
+    button {
+        font-size: 0.875rem;
+        padding: 10px 20px;
+    }
+}

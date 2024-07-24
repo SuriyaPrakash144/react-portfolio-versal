@@ -1,0 +1,183 @@
+.image {
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+}
+
+.textbox {
+    width: 60%;
+    padding-top: 6%;
+    padding-left: 5%;
+    text-align: left;
+    font-size: 30px;
+    line-height: 75px;
+}
+
+.textbox p {
+    margin-top: 10px;
+    line-height: 25px;
+    font-size: 20px;
+    color: #6d6d6d;
+}
+
+.textbox h1 {
+    letter-spacing: 2px;
+}
+
+.textbox h3 {
+    color: #a2a6a5;
+    font-size: 20px;
+}
+
+.textbox h2 {
+    letter-spacing: 2px;
+    font-size: 50px;
+    color: rgba(109, 123, 126, 1); /* Fix color alpha value */
+    margin-right: 170px;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .textbox h2 {
+        font-size: 30px; /* Adjust font size */
+        margin-right: 20px; /* Adjust margin */
+    }
+}
+
+
+.portfolio {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hiremebtn {
+    padding: 22px 60px;
+    border: none;
+    margin: 25px 0 0 0;
+    border-radius: 12px;
+    background-color: rgba(87, 201, 224, 255);
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 18px 35px;
+    border-radius: 30px;
+    transition: .4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.hiremebtn:hover
+{
+    background: #000000;
+    color: #ffffff;
+    outline: 0;
+    transition: background-color 2s ease-out;
+}
+
+.hiremebtn i {
+    font-size: 18px; /* adjust icon size */
+}
+
+
+/* Tablet View */
+@media (max-width: 1024px) {
+    .portfolio {
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+    }
+
+    .image {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+
+    .textbox {
+        width: 80%;
+        padding: 0;
+        text-align: center;
+        font-size: 24px;
+        line-height: 50px;
+    }
+
+    .textbox h1 {
+        font-size: 40px;
+    }
+
+    .textbox h2 {
+        font-size: 40px;
+    }
+
+    .textbox h3 {
+        font-size: 18px;
+    }
+
+    .textbox p {
+        font-size: 18px;
+    }
+
+    .hiremebtn {
+        padding: 18px 35px;
+        margin: 20px auto;
+    }
+
+    .hiremebtn i {
+        font-size: 16px;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .portfolio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* background-color: yellow; */
+        height: 80vh;
+        padding: 10px 0px;
+    }
+
+    .image {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .textbox {
+        width: 90%;
+        padding: 0;
+        text-align: center;
+        font-size: 18px;
+        line-height: 30px;
+        margin-left: 20px;
+    }
+
+    .textbox h1 {
+        font-size: 30px;
+    }
+
+    .textbox h2 {
+        font-size: 30px;
+    }
+
+    .textbox h3 {
+        font-size: 16px;
+    }
+
+    .textbox p {
+        font-size: 16px;
+    }
+
+    .hiremebtn {
+        padding: 15px 30px;
+        margin: 15px auto;
+    }
+
+    .hiremebtn i {
+        font-size: 14px;
+    }
+}

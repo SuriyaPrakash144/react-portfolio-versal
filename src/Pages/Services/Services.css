@@ -1,0 +1,99 @@
+.box {
+    padding: 50px;
+    background-color: rgb(209, 211, 212);
+    box-sizing: border-box; /* Ensure padding is included in the height */
+    height: 90vh;
+}
+
+.box h2 {
+    text-align: center;
+    font-size: 30px; /* Adjust font size for mobile */
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted for smaller screens */
+    gap: 15px;
+}
+
+.btndiv {
+    display: flex;
+    justify-content: center; /* Center buttons for better alignment */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.card {
+    background-color: white;
+    text-align: center;
+    padding: 15px; /* Adjusted padding */
+    box-sizing: border-box; /* Ensure padding is included in the height */
+}
+
+.card:hover {
+    box-shadow: 10px 10px 10px 5px rgba(6, 255, 243, 0.3);
+    transform: scale(1.02);
+}
+
+.card img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.card p {
+    color: #010101;
+    line-height: 1.8;
+    font-size: 14px; /* Adjusted font size for better readability */
+    padding: 10px; /* Adjusted padding */
+}
+
+.card button {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 16px; /* Adjusted padding */
+    font-size: 14px; /* Adjusted font size */
+    cursor: pointer;
+    border: none;
+    background-color: gray;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Media Query Adjustments */
+@media screen and (max-width: 768px) {
+    .box {
+        padding: 15px;
+    }
+    .box h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .box {
+        padding: 10px;
+    }
+    .box h2 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .box {
+        padding: 5px;
+    }
+    .box h2 {
+        font-size: 16px;
+    }
+    .card {
+        padding: 5px;
+    }
+    .card p {
+        font-size: 12px;
+    }
+    .card button {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+}
