@@ -1,92 +1,103 @@
-.cardbox {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* Default to column for smaller screens */
-    padding: 20px;
-    height: 70vh;
+@font-face {
+    font-family: heading;
+    src: url("../Home/Alegreya_SC/OFL.txt");
+}
+.projectsbox {
+    margin: 10px auto;
+    max-width: 1200px;
+    padding: 0 20px; /* Add some padding for smaller screens */
 }
 
-.cardimage1 a, .cardimage2 a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-size: 20px;
-    color: navy;
+ .projectsbox h1 {
+    font-family: heading;
+    color: black;
+    font-size: 40px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.cardimage1:hover, .cardimage2:hover {
-    transform: scale(1.04);
-    transition: 1s;
+.responsive-two-column-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to single column */
+    gap: 20px; /* Space between grid items */
 }
 
-.cardimage1 a:hover, .cardimage2 a:hover {
-    color: red;
-}
-
-.cardimage1 img, .cardimage2 img {
-    width: 100%;
+.project-card {
+    background-color: white;
     height: auto;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease,
+    background-color 0.3s ease,box-shadow 0.3s ease;
 }
 
-h2 {
+.project-card:hover {
+    transform: translateY(-10px);
+    background-color: aliceblue;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+}
+
+.project-card a {
+    margin: 10px auto;
+    color: navy;
+    text-decoration: none;
+    font-size: 16px;
     text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
 }
 
-@media (min-width: 769px) {
-    .cardbox {
-        flex-direction: row; /* Row layout for larger screens */
+.project-card p {
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Mobile Devices (Portrait) */
+@media (max-width: 767px) {
+    .projectsbox {
+        margin: 20px auto;
     }
 
-    .cardimage1 img {
-        width: 700px;
+    .projectsbox h1 {
+        font-size: 24px;
     }
 
-    .cardimage2 img {
-        width: 690px;
-        height: 350px;
+    .project-card {
+        padding: 10px;
+    }
+
+    .project-card a {
+        font-size: 14px;
+    }
+}
+
+/* Tablet Devices (Landscape) and Larger Screens */
+@media (min-width: 768px) {
+    .responsive-two-column-grid {
+        grid-template-columns: 1fr 1fr; /* Two-column layout */
+    }
+}
+
+/* Larger Screens */
+@media (min-width: 1200px) {
+    .responsive-two-column-grid {
+        grid-template-columns: 1fr 1fr; /* Two-column layout */
     }
 
     h2 {
-        font-size: 2.5em; /* Larger font size for larger screens */
-    }
-}
-
-/* Tablet View */
-@media (max-width: 768px) {
-    .cardbox {
-        flex-direction: column; /* Stack items in a column */
+        font-size: 36px;
     }
 
-    .cardimage1 img, .cardimage2 img {
-        width: 90%;
-    }
-
-    .cardimage1 a, .cardimage2 a {
+    .project-card a {
         font-size: 18px;
     }
-
-    h2 {
-        font-size: 2em; /* Adjust font size for tablet */
-    }
 }
-
-/* Mobile View */
-@media (max-width: 480px) {
-    .cardimage1 img, .cardimage2 img {
-        width: 100%;
-    }
-
-    .cardimage1 a, .cardimage2 a {
-        font-size: 16px;
-    }
-
-    h2 {
-        font-size: 1.5em; /* Smaller font size for mobile */
-    }
-}
+    

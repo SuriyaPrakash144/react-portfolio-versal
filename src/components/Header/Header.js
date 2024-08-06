@@ -1,47 +1,61 @@
 import React from "react";
 import "./Header.css";
+import {Link} from "react-router-dom";
+
 import sun from "./Images/sun.png";
 import moon from "./Images/moon.png";
 
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
-const Header = () => {
-  const toggleTheme = () => {
-    document.body.classList.toggle('dark-theme');
-    const icon = document.getElementById('icon');
-    if (document.body.classList.contains('dark-theme')) {
-      icon.src = sun;
-    } else {
-      icon.src = moon;
-    }
-  };
+function Header()
+{
+  let val=true;
+
+  function x()
+  {
+    return <span>Hi</span>
+  }
+
+
 
   return (
     <nav>
-      <span className="logo">PORTFOLIO</span>
+     
+      {((val==true)?<span className="logo">PORTFOLIO</span>:<span className="logo">SURIYA PRAKASH</span>)}
+      {/* <span className="logo">{x()}</span> */}
+      {/* <span className="logo">PORTFOLIO</span> */}
       <label htmlFor="check" id="toggle">
         <i className="fa-solid fa-bars" id="menu"></i>
       </label>
       <input type="checkbox" name="check" id="check" />
       <ul className="ul">
         <li className="li">
-          <a href="/home" className="link">Home</a>
+          <Link to="/home" className="link">Home</Link>
         </li>
         <li className="li">
-          <a href="/about" className="link">About</a>
+          <Link to="/about" className="link">About</Link>
         </li>
         <li className="li">
-          <a href="/services" className="link">Features</a>
+          <Link to="/services" className="link">Features</Link>
         </li>
         <li className="li">
-          <a href="/projects" className="link">Projects</a>
+          <Link to="/projects" className="link">Projects</Link>
+        </li>
+        <li className="li">
+          <Link to="/skills" className="link">Skills</Link>
         </li>
         {/* <li className="li">
-          <a href="/skills" className="link">Project</a>
+          <a href="/blog" className="link">Blog</a>
         </li> */}
         <li className="li">
-          <a href="/contact" className="link">Contact</a>
+          <Link to="/contact" className="link">Contact</Link>
         </li>
+        {/* <li className="li">
+          <a href="/cart" className="link">Cart</a>
+        </li> */}
+        {/* <li className="li">
+          <a href="/forms" className="link">Login</a>
+        </li> */}
         {/* <img
           src={moon}
           alt="Dark Mode Toggle Icon"

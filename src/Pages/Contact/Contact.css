@@ -1,3 +1,8 @@
+@font-face {
+  font-family: heading;
+  src: url("../Home/Alegreya_SC/OFL.txt");
+}
+
 .container {
     max-width: 1170px;
     margin-left: auto;
@@ -34,6 +39,7 @@
   }
   .company-info h3{
     font-size: 40px;
+    font-family: heading;
   }
   
   .company-info h3,

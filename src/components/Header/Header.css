@@ -3,9 +3,10 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
-  body {
-    background-color: whitesmoke;
+
+  @font-face {
+    font-family: heading;
+    src: url("./Alegreya_SC/AlegreyaSC-Regular.ttf");
   }
   
   .dark-theme {
@@ -43,6 +44,9 @@
     background-color: black;
     display: flex;
     justify-content: space-around;
+    font-family: heading;
+    position: relative;
+    z-index: 10;
   }
   
   .logo {
@@ -105,6 +109,7 @@
     display: none;
   }
   
+  
   @media screen and (max-width: 768px) {
     nav {
       align-items: center;
@@ -121,7 +126,7 @@
       display: block;
       background-color: #57c9e0;
       width: 100%;
-      height: 100%;
+      height: 100vh;
       position: absolute;
       top: 10vh;
       left: -1000px;

@@ -1,0 +1,216 @@
+@font-face {
+  font-family: heading;
+  src: url("../Home/Alegreya_SC/OFL.txt");
+}
+.skillbox
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    line-height: 40px;
+    height: 30vh;
+}
+.skilldiv
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5rem;
+}
+.skillstext
+{
+  font-family: heading;
+  color: black;
+  font-size: 40px;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+.progressbar
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerskills{
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  @keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  @-webkit-keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  @-moz-keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  @-o-keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  
+  .bar{
+    background-color: #EEE;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #FFF;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  }
+  .bar::before{
+    content:  attr(data-skill);
+    background-color: #f3b0ff;
+    color: black;
+    display: inline-block;
+    padding: 5px 0 5px 10px;
+    border-radius: inherit;
+    animation: load 2s 0s;
+    -webkit-animation: load 2s 0s;
+    -moz-animation: load 2s 0s;
+    -o-animation: load 2s 0s;
+  }
+
+  
+  .bar.front::before{
+    background-color: #ffcc33;
+    color: black;
+  }
+  .bar.back::before{
+    background-color: #a6cfe3;
+    color: black;
+  }
+  
+  .bar.learning::before{
+    width: calc(90% - 10px);
+  }
+  .bar.basic::before{
+    width: calc(60% - 10px);
+  }
+  .bar.intermediate::before{
+    width: calc(60% - 10px);
+  }
+  .bar.advanced::before{
+    width: calc(80% - 10px);
+    background-color: tomato;
+  }
+  .bar.react::before{
+    width: calc(40% - 10px);
+    background-color: rgb(99, 99, 216);
+  }
+  .bar.sql::before{
+    width: calc(80% - 10px);
+    background-color: rgb(89, 169, 51);
+  }
+  .bar.expert::before{
+    width: calc(100% - 10px);
+  }
+  
+  /* General mobile styles */
+@media only screen and (max-width: 768px) {
+  .skillbox {
+    padding: 20px;
+    height: auto;
+    line-height: 30px;
+  }
+
+  .skillstext {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .skilldiv {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .containerskills {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .bar::before {
+    padding: 5px 0;
+  }
+
+  .bar.learning::before {
+    width: calc(80% - 10px);
+  }
+
+  .bar.basic::before,
+  .bar.intermediate::before {
+    width: calc(50% - 10px);
+  }
+
+  .bar.advanced::before,
+  .bar.sql::before {
+    width: calc(70% - 10px);
+  }
+
+  .bar.react::before {
+    width: calc(60% - 10px);
+  }
+
+  .bar.expert::before {
+    width: calc(90% - 10px);
+  }
+}
+
+/* Specific adjustments for smaller mobile screens */
+@media only screen and (max-width: 480px) {
+  .skillstext {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .skilldiv {
+    padding: 1rem;
+  }
+
+  .bar {
+    font-size: 12px;
+  }
+
+  .bar::before {
+    padding: 4px 0;
+  }
+
+  .bar.learning::before {
+    width: calc(70% - 10px);
+  }
+
+  .bar.basic::before,
+  .bar.intermediate::before {
+    width: calc(40% - 10px);
+  }
+
+  .bar.advanced::before,
+  .bar.sql::before {
+    width: calc(60% - 10px);
+  }
+
+  .bar.react::before {
+    width: calc(50% - 10px);
+  }
+
+  .bar.expert::before {
+    width: calc(80% - 10px);
+  }
+}

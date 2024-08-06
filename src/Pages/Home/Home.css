@@ -1,11 +1,21 @@
+@font-face {
+    font-family: hometext;
+    src: url("./Alegreya_SC/OFL.txt");
+}
+@font-face {
+    font-family: bodytext;
+    src: url("./Fonts/IM_Fell_French_Canon_SC/IMFellFrenchCanonSC-Regular.ttf");
+}
+
 .image {
     width: 360px;
-    height: 360px;
+    height: 360px;  
     border-radius: 50%;
 }
 
 .textbox {
     width: 60%;
+    height: auto;
     padding-top: 6%;
     padding-left: 5%;
     text-align: left;
@@ -14,14 +24,16 @@
 }
 
 .textbox p {
+    font-family: bodytext;
     margin-top: 10px;
     line-height: 25px;
-    font-size: 20px;
+    font-size: 22px;
     color: #6d6d6d;
 }
 
 .textbox h1 {
     letter-spacing: 2px;
+    font-family: hometext;
 }
 
 .textbox h3 {
@@ -50,6 +62,7 @@
     height: 80vh;
     display: flex;
     justify-content: space-evenly;
+    z-index: -1;
 }
 
 .hiremebtn {
