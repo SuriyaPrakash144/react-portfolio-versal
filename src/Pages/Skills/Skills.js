@@ -20,7 +20,7 @@ function Skills()
     <div className="skilldiv">
     <div className="containerskills">
         <div className="bar front expert" data-skill="HTML5"></div>
-        <div className="bar front advanced" data-skill="CSS3"></div>
+        <div className="bar front advanced" data-skill="CSS5"></div>
         <div className="bar learning" data-skill="BOOTSTRAP"></div>
     </div>
     <div className="containerskills ">

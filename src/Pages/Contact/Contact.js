@@ -54,7 +54,7 @@ function Contact() {
           <ul className="socialmedia" >
   <h4>Social Media</h4> 
   <a href="https://www.facebook.com/profile.php?id=100062754324837&mibextid=ZbWKwL"><li><i className="fa-brands fa-facebook"></i></li></a>
-  <a href="https://www.instagram.com/mr._.suriya._.14?igsh=MWc0eGduY292azFpaA=="><li><i className="fa-brands fa-instagram"></i></li></a>
+  {/* <a href="https://www.instagram.com/mr._.suriya._.14?igsh=MWc0eGduY292azFpaA=="><li><i className="fa-brands fa-instagram"></i></li></a> */}
   <a href="https://www.linkedin.com/in/suriya-prakash-a-2306b227a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><li><i className="fa-brands fa-linkedin"></i></li></a>
   <a href="https://github.com/SuriyaPrakash144"><li><i className="fa-brands fa-github"></i></li></a>
 </ul>

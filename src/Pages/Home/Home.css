@@ -2,10 +2,10 @@
     font-family: hometext;
     src: url("./Alegreya_SC/OFL.txt");
 }
-@font-face {
+/* @font-face {
     font-family: bodytext;
-    src: url("./Fonts/IM_Fell_French_Canon_SC/IMFellFrenchCanonSC-Regular.ttf");
-}
+    src: url("./Spectral/Spectral-Medium.ttf");
+} */
 
 .image {
     width: 360px;
